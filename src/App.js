@@ -6,6 +6,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
+import Footer from './components/Footer'
 
 const App=()=> {
   const [mode, setMode] = useState('light');
@@ -38,6 +39,8 @@ const App=()=> {
       <BrowserRouter>
       <Routes>
         <Route  exact path="/" element={<News mode={mode} emode={emode} key="general" category="general" heading=""country="in" q="" />}></Route>
+        <Route  exact path="/us" element={<News mode={mode} emode={emode} key="us" category="general" heading="US"country="us" q="" />}></Route>
+        <Route  exact path="/ca" element={<News mode={mode} emode={emode} key="us" category="general" heading="CA"country="ca" q="" />}></Route>
         <Route   path="/business" element={<News mode={mode} emode={emode} key="business" category="business" heading="Business"country="in" q=""/>}></Route>
         <Route   path="/entertainment" element={<News mode={mode}emode={emode}key="entertainment" heading="Entertainment"category="entertainment" country="in" q=""/>}></Route>
         <Route   path="/health" element={<News mode={mode} emode={emode} key="health" category="health" heading="Health"country="in" q=""/>}></Route>
@@ -46,6 +49,7 @@ const App=()=> {
         <Route   path="/technology" element={<News mode={mode} emode={emode} key="technology" category="technology"heading="Technology"country="in" q=""/>}></Route>
       </Routes>
     </BrowserRouter>
+   <Footer/>
       </>
     )
   }

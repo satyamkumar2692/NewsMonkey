@@ -14,7 +14,7 @@ import React from 'react'
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       
       <li className="nav-item">
-        <a className="nav-link" href="/">General</a>
+        <a className="nav-link" href="/">General🇮🇳</a>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="/business">Business</a>
@@ -34,7 +34,13 @@ import React from 'react'
       <li className="nav-item">
         <a className="nav-link" href="/technology">Technology</a>
       </li>
-
+      <li className="nav-item">
+        <a className="nav-link" href="/us">🇺🇸</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="/ca">🇨🇦</a>
+      </li>
+    
 
       
 
