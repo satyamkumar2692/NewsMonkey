@@ -14,7 +14,7 @@ import React from 'react'
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       
       <li className="nav-item">
-        <a className="nav-link" href="/">General🇮🇳</a>
+        <a className="nav-link" href="/">General</a>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="/business">Business</a>
@@ -34,13 +34,19 @@ import React from 'react'
       <li className="nav-item">
         <a className="nav-link" href="/technology">Technology</a>
       </li>
-      <li className="nav-item">
-        <a className="nav-link" href="/us">🇺🇸</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="/ca">🇨🇦</a>
-      </li>
+     
+      
     
+      <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle btn-sm" style={{marginTop:5}} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    {props.country2}
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="/us" >US</a></li>
+    <li><a class="dropdown-item" href="/ca">Canada</a></li>
+    <li><a class="dropdown-item" href="/ru">Russia</a></li>
+  </ul>
+</div>
 
       
 
@@ -57,6 +63,7 @@ import React from 'react'
               <label className="form-check-label" style={{marginRight:10}} htmlFor="flexSwitchCheckDefault">Dark Mode</label>
             </div>
   </div>
+
 </nav>
       </div>
     )

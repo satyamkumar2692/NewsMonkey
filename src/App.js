@@ -11,6 +11,8 @@ import Footer from './components/Footer'
 const App=()=> {
   const [mode, setMode] = useState('light');
   const [emode, setEmode] = useState('0');
+  const [country2, setcountry] = useState("📍")
+ 
   const toggleFunc = () => {
     if (mode === 'light' ) {
       setMode('dark');
@@ -35,18 +37,19 @@ const App=()=> {
 }
     return (
       <>
-      <NavBar toggle={toggleFunc} toggle2={toggleFunc2}/>
+      <NavBar toggle={toggleFunc} toggle2={toggleFunc2} country2={country2} setcountry={setcountry} />
       <BrowserRouter>
       <Routes>
-        <Route  exact path="/" element={<News mode={mode} emode={emode} key="general" category="general" heading=""country="in" q="" />}></Route>
-        <Route  exact path="/us" element={<News mode={mode} emode={emode} key="us" category="general" heading="US"country="us" q="" />}></Route>
-        <Route  exact path="/ca" element={<News mode={mode} emode={emode} key="us" category="general" heading="CA"country="ca" q="" />}></Route>
-        <Route   path="/business" element={<News mode={mode} emode={emode} key="business" category="business" heading="Business"country="in" q=""/>}></Route>
-        <Route   path="/entertainment" element={<News mode={mode}emode={emode}key="entertainment" heading="Entertainment"category="entertainment" country="in" q=""/>}></Route>
-        <Route   path="/health" element={<News mode={mode} emode={emode} key="health" category="health" heading="Health"country="in" q=""/>}></Route>
-        <Route   path="/science" element={<News  mode={mode}emode={emode}key="science" category="science" heading="Science"country="in" q=""/>}></Route>
-        <Route   path="/sports" element={<News  mode={mode} emode={emode} key="sports" category="sports" heading="Sports"country="in" q=""/>}></Route>
-        <Route   path="/technology" element={<News mode={mode} emode={emode} key="technology" category="technology"heading="Technology"country="in" q=""/>}></Route>
+        <Route  exact path="/" element={<News mode={mode} emode={emode} key="general" category="general" heading=""country="in" q="" setcountry={setcountry} />}></Route>
+        <Route  exact path="/us" element={<News mode={mode} emode={emode} key="us" category="general" heading="US"country="us" q="" setcountry={setcountry} />}></Route>
+        <Route  exact path="/ca" element={<News mode={mode} emode={emode} key="ca" category="general" heading="CA"country="ca" q="" setcountry={setcountry} />}></Route>
+        <Route  exact path="/ru" element={<News mode={mode} emode={emode} key="ru" category="general" heading="RU"country="ru" q="" setcountry={setcountry} />}></Route>
+        <Route   path="/business" element={<News mode={mode} emode={emode} key="business" category="business" heading="Business"country="in" q=""setcountry={setcountry} />}></Route>
+        <Route   path="/entertainment" element={<News mode={mode}emode={emode}key="entertainment" heading="Entertainment"category="entertainment" country="in" q=""setcountry={setcountry} />}></Route>
+        <Route   path="/health" element={<News mode={mode} emode={emode} key="health" category="health" heading="Health"country="in" q=""setcountry={setcountry} />}></Route>
+        <Route   path="/science" element={<News  mode={mode}emode={emode}key="science" category="science" heading="Science"country="in" q=""setcountry={setcountry} />}></Route>
+        <Route   path="/sports" element={<News  mode={mode} emode={emode} key="sports" category="sports" heading="Sports"country="in" q=""setcountry={setcountry} />}></Route>
+        <Route   path="/technology" element={<News mode={mode} emode={emode} key="technology" category="technology"heading="Technology"country="in" q=""setcountry={setcountry} />}></Route>
       </Routes>
     </BrowserRouter>
    <Footer/>
