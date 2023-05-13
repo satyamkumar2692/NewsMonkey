@@ -1,1 +1,1 @@
-NewsMonkey
+NewsMonkey-A News App made with React and News-API
